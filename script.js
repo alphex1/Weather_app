@@ -66,7 +66,6 @@ changeBackground(code)
 
 
 // BACKGROUND CHANGER
-
 function changeBackground(code){
 
 let hour = new Date().getHours()
@@ -76,7 +75,9 @@ let rainLayer = document.querySelector(".rain-layer")
 if(hour >= 18 || hour <= 6){
 
 document.body.style.backgroundImage = "url('night.jpg')"
-rainLayer.style.opacity = 0
+
+if(rainLayer) rainLayer.style.opacity = 0
+
 return
 
 }
@@ -85,7 +86,8 @@ return
 if(code === 0){
 
 document.body.style.backgroundImage = "url('sunny.jpg')"
-rainLayer.style.opacity = 0
+
+if(rainLayer) rainLayer.style.opacity = 0
 
 }
 
@@ -93,7 +95,8 @@ rainLayer.style.opacity = 0
 else if(code >= 1 && code <= 3){
 
 document.body.style.backgroundImage = "url('cloudy.jpg')"
-rainLayer.style.opacity = 0
+
+if(rainLayer) rainLayer.style.opacity = 0
 
 }
 
@@ -101,7 +104,8 @@ rainLayer.style.opacity = 0
 else if(code >= 51 && code <= 67){
 
 document.body.style.backgroundImage = "url('rainy.jpg')"
-rainLayer.style.opacity = 0.4
+
+if(rainLayer) rainLayer.style.opacity = 0.4
 
 }
 
@@ -109,12 +113,12 @@ rainLayer.style.opacity = 0.4
 else{
 
 document.body.style.backgroundImage = "url('day.jpg')"
-rainLayer.style.opacity = 0
+
+if(rainLayer) rainLayer.style.opacity = 0
 
 }
 
 }
-
 
 
 // GET USER LOCATION
