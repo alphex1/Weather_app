@@ -75,7 +75,7 @@ let rainLayer = document.querySelector(".rain-layer")
 // night time
 if(hour >= 18 || hour <= 6){
 
-document.body.style.backgroundImage = "url('images/night.jpg')"
+document.body.style.backgroundImage = "url('night.jpg')"
 rainLayer.style.opacity = 0
 return
 
@@ -84,7 +84,7 @@ return
 // sunny
 if(code === 0){
 
-document.body.style.backgroundImage = "url('images/sunny.jpg')"
+document.body.style.backgroundImage = "url('sunny.jpg')"
 rainLayer.style.opacity = 0
 
 }
@@ -92,7 +92,7 @@ rainLayer.style.opacity = 0
 // cloudy
 else if(code >= 1 && code <= 3){
 
-document.body.style.backgroundImage = "url('images/cloudy.jpg')"
+document.body.style.backgroundImage = "url('cloudy.jpg')"
 rainLayer.style.opacity = 0
 
 }
@@ -100,7 +100,7 @@ rainLayer.style.opacity = 0
 // rainy
 else if(code >= 51 && code <= 67){
 
-document.body.style.backgroundImage = "url('images/rainy.jpg')"
+document.body.style.backgroundImage = "url('rainy.jpg')"
 rainLayer.style.opacity = 0.4
 
 }
@@ -108,7 +108,7 @@ rainLayer.style.opacity = 0.4
 // default
 else{
 
-document.body.style.backgroundImage = "url('images/day.jpg')"
+document.body.style.backgroundImage = "url('day.jpg')"
 rainLayer.style.opacity = 0
 
 }
